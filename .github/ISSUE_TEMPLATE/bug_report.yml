@@ -1,0 +1,96 @@
+name: Bug Report
+description: Something doesn't seem correct and it might be a bug
+labels: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug description
+      description: |
+        A clear and concise description of what the bug is.
+        Is it a game crash, an unexpected behavior, or has something gone wrong?
+        If applicable, add screenshots to help explain the bug.
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: textarea
+    id: to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Steps to reproduce the bug
+      placeholder: |
+        1. Create a world
+        2. Wait until midnight
+        3. Hug a creeper
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+      placeholder: The creeper explodes
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: What actually happened?
+      placeholder: The creeper launches itself into the sky
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: |-
+        Please send the corresponding Minecraft log from the `logs` folder here.
+        Please upload the log file as an attachment, or upload the log to [mclo.gs](https://mclo.gs/) and paste the url here - mclo.gs sanitizes sensitive information such as ip addresses.
+        Please refrain from pasting the entire log file directly.
+      placeholder: https://mclo.gs/
+  - type: input
+    id: versions
+    attributes:
+      label: Minecraft & Mod Loader versions
+      description: The Minecraft version(s) and mod loader with loader version where this bug occurs in.
+      placeholder: 1.21.1 fabric 0.16.14
+    validations:
+      required: true
+  - type: input
+    id: launcher
+    attributes:
+      label: Minecraft launcher
+      description: The launcher you are using if bug occurs on the client side.
+      placeholder: Prism Launcher
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating system
+      description: The operating system where this bug occurs in.
+      placeholder: Windows 10
+    validations:
+      required: true
+  - type: input
+    id: mod-version
+    attributes:
+      label: AutoModpack version
+      description: The AutoModpack version(s) where this bug occurs in.
+      placeholder: 1.2.3
+    validations:
+      required: true
+  - type: textarea
+    id: other-information
+    attributes:
+      label: Other information
+      description: Other useful information to this bug report, e.g. other related mod version(s). Leave empty if there is none.
+      placeholder: The issue only occurs if the player is in survival mode
+  - type: checkboxes
+    id: check-list
+    attributes:
+      label: Check list
+      options:
+        - label: I have verified that the issue persists in the latest version of the mod.
+          required: true
+        - label: I have searched the existing issues and confirmed that this is not a duplicate.
+          required: true
+        - label: I have provided all the necessary information to reproduce the issue.
+          required: true
+        - label: I have verified that the issue does not occur without the AutoModpack - Ignore if you are reporting a mod conflict issue.
+          required: false
