@@ -35,7 +35,7 @@ jobs:
           JSON_BODY=$(jq -Rn --arg body "$README_CONTENT" '{body: $body}')
 
           # Send to Modrinth
-          curl -X PATCH "https://api.modrinth.com/v2/project/automodpackvelocity" \
+          curl --fail-with-body -X PATCH "https://api.modrinth.com/v2/project/automodpackvelocity" \
             -H "Content-Type: application/json" \
             -H "User-Agent: automodpackvelocity" \
             -H "Authorization: $MODRINTH_API_TOKEN" \
