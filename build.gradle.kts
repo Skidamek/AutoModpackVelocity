@@ -69,6 +69,10 @@ tasks {
         // Your plugin's jar (or shadowJar if present) will be used automatically.
         velocityVersion(pinnedVelocityVersion)
         build(pinnedVelocityBuild)
+
+        downloadPlugins {
+            modrinth("loginphaseproxy", "0.2.0-beta")
+        }
     }
 }
 
