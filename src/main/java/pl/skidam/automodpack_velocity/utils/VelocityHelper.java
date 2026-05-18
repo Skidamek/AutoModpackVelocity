@@ -26,7 +26,7 @@ public class VelocityHelper {
      * of directly to the backend.
      */
     public static String rewriteDataPacket(JsonObject obj, String address, int port) {
-        obj.addProperty("address", address);
+        obj.addProperty("address", port != -1 ? address : "");
         obj.addProperty("port", port);
         obj.addProperty("requiresMagic", true); // proxy reads AMMH from client for hostname-based routing
 

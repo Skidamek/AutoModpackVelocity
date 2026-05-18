@@ -44,11 +44,11 @@ This configuration refers only to the proxy instance of AutoModpack, not the ind
 
 ### Network & Hosting
 
-| Setting          | Default | Description                                                               |
-|------------------|---------|---------------------------------------------------------------------------|
-| `bindAddress`    | `""`    | The local IP to bind the host to. Empty binds to 0.0.0.0 or ::0.          |
-| `bindPort`       | `-1`    | The port to listen on. -1 uses the Minecraft Server's port (recommended). |
-| `bandwidthLimit` | `0`     | Upload speed limit in Mbps (0 = unlimited).                               |
+| Setting          | Default | Description                                                                                 |
+|------------------|---------|---------------------------------------------------------------------------------------------|
+| `bindAddress`    | `""`    | The local IP to bind the host to. Empty binds to 0.0.0.0 or ::0. Ignored if bindPort is -1. |
+| `bindPort`       | `-1`    | The port to listen on. -1 uses the Minecraft Server's port (recommended).                   |
+| `bandwidthLimit` | `0`     | Upload speed limit in Mbps (0 = unlimited).                                                 |
 
 ## 🙏 Huge Thanks to Our Supporters!
 
