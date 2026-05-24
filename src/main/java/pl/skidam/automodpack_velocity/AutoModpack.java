@@ -21,7 +21,7 @@ import static pl.skidam.automodpack_velocity.Constants.logger;
         version = BuildConstants.VERSION,
         description = BuildConstants.DESCRIPTION,
         url = "https://github.com/skidamek/AutoModpack",
-        authors = {"Caio Stoduto", "Skidamek"},
+        authors = {"Caio Stoduto", "Skidam"},
         dependencies = {@Dependency(id = "loginphaseproxy"),})
 public class AutoModpack {
 
