@@ -56,7 +56,7 @@ public class ConfigTools {
                 String json = Files.readString(configFile);
                 T obj = GSON.fromJson(json, configClass);
                 if (obj == null) {
-                    logger.error("Parsed object is null. Possible JSON syntax error in file: " + configFile);
+                    logger.error("Parsed object is null. Possible JSON syntax error in file: {}", configFile);
                     return null;
                 }
 
@@ -65,10 +65,10 @@ public class ConfigTools {
             }
         } catch (JsonSyntaxException e) {
             logger.error("JSON syntax error while loading config! {} {}", configClass, e.getMessage());
-            logger.error("This error most often happens when you e.g. forget to put a comma between fields in JSON file. Check the file: " + configFile.toAbsolutePath().normalize());
+            logger.error("This error most often happens when you e.g. forget to put a comma between fields in JSON file. Check the file: {}", configFile.toAbsolutePath().normalize());
             return null;
         } catch (Exception e) {
-            logger.error("Couldn't load config! " + configClass);
+            logger.error("Couldn't load config! {}", configClass);
             e.printStackTrace();
         }
 
@@ -77,7 +77,7 @@ public class ConfigTools {
             save(configFile, obj);
             return obj;
         } catch (Exception e) {
-            logger.error("Invalid config class! " + configClass);
+            logger.error("Invalid config class! {}", configClass);
             e.printStackTrace();
             return null;
         }
@@ -92,7 +92,7 @@ public class ConfigTools {
 
             Files.writeString(configFile, GSON.toJson(configObject), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
         } catch (Exception e) {
-            logger.error("Couldn't save config! " + configObject.getClass());
+            logger.error("Couldn't save config! {}", configObject.getClass());
             e.printStackTrace();
         }
     }

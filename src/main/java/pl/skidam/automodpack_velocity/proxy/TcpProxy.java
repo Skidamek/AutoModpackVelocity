@@ -38,19 +38,19 @@ public final class TcpProxy {
     // -----------------------------------------------------------------------
 
     public void start() {
-        if (!proxyConfig.modpackHost) {
+        if (!proxyConfig.proxyHost) {
             return;
         }
 
         // Shared port
-        if (proxyConfig.bindPort == -1) {
+        if (proxyConfig.port == -1) {
             new TrafficShaper(null, proxyConfig.bandwidthLimit, TrafficShaper.TrafficShaperType.READ);
             return;
         }
 
         try {
-            String address = proxyConfig.bindAddress;
-            int port = proxyConfig.bindPort;
+            String address = proxyConfig.address;
+            int port = proxyConfig.port;
             InetSocketAddress bindAddress;
             if (address == null || address.isBlank()) {
                 bindAddress = new InetSocketAddress(port);

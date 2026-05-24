@@ -243,7 +243,7 @@ public class ProxyFrontendHandler extends ByteToMessageDecoder {
     }
 
     private void onMagicMismatch(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) {
-        boolean isSharedPort = proxyConfig.bindPort == -1;
+        boolean isSharedPort = proxyConfig.port == -1;
         if (isSharedPort) {
             fallbackToOriginalPipeline(ctx, in, out);
         } else {

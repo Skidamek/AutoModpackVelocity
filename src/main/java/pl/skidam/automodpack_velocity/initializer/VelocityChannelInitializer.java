@@ -42,7 +42,7 @@ public class VelocityChannelInitializer {
 
             // Install our ChannelInitializers to inject the FrontendInterceptor/BackendInterceptor into the pipeline
             backendInjection.install();
-            if (proxyConfig.modpackHost && proxyConfig.bindPort == -1)
+            if (proxyConfig.proxyHost && proxyConfig.port == -1)
                 frontendInjection.install();
             
             logger.info("Velocity network initializers injected successfully.");

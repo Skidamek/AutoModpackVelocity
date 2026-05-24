@@ -39,7 +39,7 @@ public class AutoModpackDataHandler extends ChannelDuplexHandler {
                 cacheBackendPort(ctx, obj);
 
                 // Modify the parsed JSON to set the proxy serverAddress and port
-                String modifiedStr = rewriteDataPacket(obj, proxyConfig.bindAddress, proxyConfig.bindPort);
+                String modifiedStr = rewriteDataPacket(obj, proxyConfig.address, proxyConfig.port);
                 logger.debug("[DataHandler] Modified Data {} -> {}",
                         originalStr, modifiedStr);
 
