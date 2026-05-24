@@ -38,6 +38,9 @@ dependencies {
     annotationProcessor("com.velocitypowered:velocity-api:$pinnedVelocityVersion")
     compileOnly(files(downloadVelocityBuild.flatMap { it.outputFile }))
 
+    // bStats
+    implementation("org.bstats:bstats-velocity:3.2.1")
+
     // Additional dependencies
     compileOnly("io.netty:netty-transport:4.2.10.Final")
 }
@@ -54,7 +57,7 @@ tasks {
     shadowJar {
         // Relocate bundled dependencies to avoid conflicts with other plugins
         // that might shade the same library. Replace with your group ID.
-        // relocate("org.bstats", project.group.toString() + ".libs.bstats")
+        relocate("org.bstats", project.group.toString() + "." + project.property("id") + ".libs.bstats")
 
         // Strip unnecessary files from the shadow jar
         minimize()

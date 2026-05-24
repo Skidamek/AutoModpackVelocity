@@ -8,6 +8,7 @@ import com.velocitypowered.api.plugin.Dependency;
 import com.velocitypowered.api.plugin.Plugin;
 import com.velocitypowered.api.plugin.annotation.DataDirectory;
 import com.velocitypowered.api.proxy.ProxyServer;
+import org.bstats.velocity.Metrics;
 import pl.skidam.automodpack_velocity.initializer.VelocityChannelInitializer;
 import pl.skidam.automodpack_velocity.proxy.TcpProxy;
 import org.slf4j.Logger;
@@ -28,14 +29,19 @@ public class AutoModpack {
     private final TcpProxy proxy = new TcpProxy();
 
     @Inject
-    public AutoModpack(ProxyServer server, Logger logger, @DataDirectory Path dataDirectory) {
+    public AutoModpack(ProxyServer server, Logger logger, @DataDirectory Path dataDirectory, Metrics.Factory metricsFactory) {
         Constants.proxyServer = server;
         Constants.logger = logger;
         Constants.dataDirectory = dataDirectory;
+        Constants.metricsFactory = metricsFactory; // bStats
     }
 
     @Subscribe
     public void onProxyInitialization(ProxyInitializeEvent event) {
+        // Initialize bStats
+        int pluginId = 31550;
+        Metrics metrics = Constants.metricsFactory.make(this, pluginId);
+
         long start = System.currentTimeMillis();
         logger.info("Launching AutoModpack...");
 

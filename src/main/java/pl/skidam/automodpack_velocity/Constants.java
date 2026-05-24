@@ -1,6 +1,7 @@
 package pl.skidam.automodpack_velocity;
 
 import com.velocitypowered.api.proxy.ProxyServer;
+import org.bstats.velocity.Metrics;
 import pl.skidam.automodpack_velocity.cache.BackendPortCache;
 import pl.skidam.automodpack_velocity.config.Jsons;
 import org.slf4j.Logger;
@@ -26,6 +27,7 @@ public class Constants {
     public static ProxyServer proxyServer;
     public static Logger logger;
     public static Path dataDirectory;
+    public static Metrics.Factory metricsFactory;
     public static Jsons.ProxyConfigFieldsV2 proxyConfig;
     public static BackendPortCache backendPortCache;
 }
