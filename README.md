@@ -80,3 +80,5 @@ These settings refers only to the **AutoModpack Velocity**, not the individual b
 ## 🙏 Acknowledgements
 
 - [Caio Stoduto](https://github.com/caiostoduto), who dedicated his time and effort to creating this plugin!
+- **Suerion**, who helped with testing and provided valuable feedback!
+- All contributors who contributed to this plugin, whether by reporting issues, suggesting features, or contributing code!
