@@ -38,6 +38,10 @@ AutoModpack checks for modpack updates when the Minecraft client launches and wh
 
 **Workaround 2:** Use a dedicated lobby server as the entry point with AutoModpack installed, and remove AutoModpack from all other backend servers. Players will receive modpack updates on initial connection to the lobby, before being routed to any other server.
 
+### [NeoVelocity](https://github.com/Gabwasnt/NeoVelocity) mod doesn't work with AutoModpack Velocity
+
+Try using [Proxy Compatible Forge](https://modrinth.com/mod/proxy-compatible-forge) instead (compatible with NeoForge).
+
 ## ⚠️ Security and Trust!
 
 > With great power comes great responsibility.
