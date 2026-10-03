@@ -1,7 +1,7 @@
 **AutoModpack Velocity** is a Velocity companion plugin for [AutoModpack](https://modrinth.com/project/automodpack/), enabling you to use it on your Velocity proxy network.
 
 <p align="center">
-    <a href="https://github.com/Skidamek/AutoModpackVelocity/releases"><img src="https://img.shields.io/github/downloads/skidamek/automodpackvelocity/total?style=round&logo=github" alt="GitHub Total Downloads"></a>
+    <a href="https://github.com/Skidamek/AutoModpackVelocity/releases"><img src="https://img.shields.io/github/downloads/skidamek/automodpackvelocity/total?logo=github&label=&style=flat&color=242629" alt="GitHub Total Downloads"></a>
     <a href="https://modrinth.com/mod/automodpackvelocity"><img src="https://img.shields.io/modrinth/dt/lCCrKinv?logo=modrinth&label=&style=flat&color=242629" alt="Modrinth Downloads"></a>
 </p>
 
